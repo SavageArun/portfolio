@@ -719,7 +719,7 @@ Arun
 <script src="https://vq.pe/creator/admin/js/form_ajax.js?v=1671698837"></script>
 <script src="https://vq.pe/creator/frontend/js/main.js?v=1678114141"></script>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>WhatsApp Chat Join Button</title>
@@ -765,7 +765,66 @@ Arun
         });
     </script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-5px) rotate(-5deg);
+      }
+      75% {
+        transform: translateX(5px) rotate(5deg);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 35px;
+      height: 35px;
+      background-color: green;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 9999;
+      animation: shake 1s infinite;
+      animation-delay: 1s;
+    }
+
+    .whatsapp-button img {
+      width: 42px;
+      height: 42px;
+    }
+  </style>
+  <script>
+    function openWhatsApp() {
+      var message = "Hello Arun! Let's Talk about a Project.";
+      var encodedMessage = encodeURIComponent(message);
+      var phoneNumber = "your-whatsapp-number";
+      var url = "https://wa.me/+918510062945" + phoneNumber + "?text=" + encodedMessage;
+      window.open(url, "_blank");
+    }
+  </script>
+</head>
+<body>
+  <div class="whatsapp-button" onclick="openWhatsApp()">
+    <img src="https://mobirise.com/extensions/chat-button/assets/images/whatspp-1076x1076.png" alt="WhatsApp Logo">
+  </div>
+</body>
 </html>
+
 	
 </body>
 </html>
